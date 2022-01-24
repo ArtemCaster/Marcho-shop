@@ -26,6 +26,7 @@ function styles () {
 function scripts () {
   return src([
     'node_modules/jquery/dist/jquery.js',  //плагины jqery
+    'node_modules/slick-carousel/slick/slick.js',  //плагины slick
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -64,7 +65,7 @@ function browsersync() {
 //слежение за проектом
 function watching () {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts());
+  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
