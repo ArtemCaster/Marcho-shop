@@ -27,6 +27,7 @@ function scripts () {
   return src([
     'node_modules/jquery/dist/jquery.js',  //плагины jqery
     'node_modules/slick-carousel/slick/slick.js',  //плагины slick
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',  //плагины fancybox
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
