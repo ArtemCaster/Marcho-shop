@@ -12,7 +12,7 @@ const browserSync         = require('browser-sync').create();
 
 
 function nunjucks(){
-  return src('app/*.njk')
+  return src('app/html/*.njk')
     .pipe(nunjucksrender())
     .pipe(dest('app'))
     .pipe(browserSync.stream())
@@ -81,7 +81,7 @@ function browsersync() {
 //слежение за проектом
 function watching () {
   watch(['app/**/*.scss'], styles);
-  watch(['app/*.njk'], nunjucks);
+  watch(['app/html/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
