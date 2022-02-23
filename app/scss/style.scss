@@ -51,6 +51,10 @@
   &__filters {
     margin-right: 30px;
   }
+  
+  &__filter-btn{
+    display: none;
+  }
 }
 
 .filter {
@@ -841,6 +845,7 @@
 
 .related {
   padding: 50px 0 120px;
+  text-align: center;
 
   &__title {
     margin-bottom: 50px;
@@ -853,13 +858,17 @@
 
     .product-item__img-box {
       height: auto;
+      margin-bottom: 20px;
     }
 
     .product-item__title {
       font-size: 20px;
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
   }
 }
+
 
 .blog-page {
   padding: 120px 0 60px;
@@ -1354,4 +1363,4 @@
 }
 
 
-@import "media.scss";
+@import 'media';
